@@ -22,4 +22,6 @@ public interface TopicRepository extends Repository<Topic, Long>, JpaSpecificati
 	void save(Topic topic);
 
 	List<Topic> findByOwnerAndCreationInstantAfterOrderByCreationInstantAsc(User loggedUser, Instant oneHourAgo);
+
+	Topic findById(Long topicId);
 }
