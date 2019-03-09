@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -78,7 +79,7 @@ public class TopicController {
 	}
 
 	@PostMapping(value = "/api/topics", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<TopicOutputDto> createTopic(@RequestBody NewTopicInputDto newTopicDto,
+	public ResponseEntity<TopicOutputDto> createTopic(@Valid @RequestBody NewTopicInputDto newTopicDto,
 											 @AuthenticationPrincipal User loggedUser,
 											 UriComponentsBuilder uriBuilder) {
 
