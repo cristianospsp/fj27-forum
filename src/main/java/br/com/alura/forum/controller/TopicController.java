@@ -5,7 +5,6 @@ import br.com.alura.forum.controller.dto.input.NewTopicInputDto;
 import br.com.alura.forum.controller.dto.input.TopicSearchInputDto;
 import br.com.alura.forum.controller.dto.output.TopicBriefOutputDto;
 import br.com.alura.forum.controller.dto.output.TopicOutputDto;
-import br.com.alura.forum.model.Category;
 import br.com.alura.forum.model.User;
 import br.com.alura.forum.model.topic.domain.Topic;
 import br.com.alura.forum.repository.CategoryRepository;
@@ -94,6 +93,12 @@ public class TopicController {
 	@InitBinder("newTopicInputDto")
 	public void initBinder(WebDataBinder binder, @AuthenticationPrincipal User loggedUser) {
 		binder.addValidators(new NewTopicCustomValidator(this.topicRepository, loggedUser));
+	}
+
+	@GetMapping(value = "/api/topics/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public TopicOutputDto getTopicDetails(@PathVariable Long id) {
+		Topic byId = this.topicRepository.findById(id);
+		return new TopicOutputDto(byId);
 	}
 
 }
