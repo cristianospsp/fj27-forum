@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,9 @@ public class ForumEmailService {
 	@Autowired
 	private JavaMailSender mailSender;
 
+	@Autowired
+	private NewMailFactory newReplyMailFactory;
+
 	@Async
 	public void sendEmail(Answer answer) {
 		SimpleMailMessage smm = new SimpleMailMessage();
@@ -27,8 +32,17 @@ public class ForumEmailService {
 				"Há uma nova mensagem no fórum! " + answer.getOwnerName() +
 				" comentou o tópico: " + answer.getTopic().getShortDescription());
 
+		MimeMessagePreparator messagePreparator = (mimeMessage) -> {
+			MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
+			messageHelper.setTo(answer.getTopic().getOwnerEmail());
+			messageHelper.setSubject("Novo comentário em: " + answer.getTopic().getShortDescription());
+			String messageContent = this.newReplyMailFactory.generateNewReplyMailContent(answer);
+			messageHelper.setText(messageContent, true);
+		};
+
+
 		try {
-			mailSender.send(smm);
+			mailSender.send(messagePreparator);
 		} catch (MailServiceException me) {
 			logger.info("nao foi possivel enviar email para: " + answer.getTopic().getOwner().getEmail());
 			throw new MailServiceException("Não foi possível enviar email.", me);
