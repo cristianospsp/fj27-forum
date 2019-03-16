@@ -97,6 +97,7 @@ public class TopicController {
 		binder.addValidators(new NewTopicCustomValidator(this.topicRepository, loggedUser));
 	}
 
+	@Cacheable(value = "topicDetails", key = "#id")
 	@GetMapping(value = "/api/topics/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public TopicOutputDto getTopicDetails(@PathVariable Long id) {
 		Topic byId = this.topicRepository.findById(id);

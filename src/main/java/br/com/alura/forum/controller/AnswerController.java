@@ -8,6 +8,7 @@ import br.com.alura.forum.model.topic.domain.Topic;
 import br.com.alura.forum.repository.TopicRepository;
 import br.com.alura.forum.service.NewReplyProcessorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -31,6 +32,7 @@ public class AnswerController {
 	@Autowired
 	private NewReplyProcessorService newReplyProcessorService;
 
+	@CacheEvict(value = "topicDetail", key = "#topicId")
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<AnswerOutputDto> answerTopic(@PathVariable Long topicId,
 													   @Valid @RequestBody NewAnswerInputDto newAnswerDto,
