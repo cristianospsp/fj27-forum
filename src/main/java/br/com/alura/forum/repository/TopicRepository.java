@@ -20,7 +20,7 @@ public interface TopicRepository extends Repository<Topic, Long>, JpaSpecificati
 	@Query("select t from Topic t where t.course.subcategory = :category")
 	List<Topic> findAllByCategory(Category category);
 
-	void save(Topic topic);
+	Topic save(Topic topic);
 
 	List<Topic> findByOwnerAndCreationInstantAfterOrderByCreationInstantAsc(User loggedUser, Instant oneHourAgo);
 
