@@ -4,10 +4,11 @@ import br.com.alura.forum.model.Category;
 import br.com.alura.forum.model.topic.domain.Topic;
 import br.com.alura.forum.model.topic.domain.TopicStatus;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.List;
 
-public class DashBoardItemDto {
+public class DashBoardItemDto implements Serializable {
 
 	private String categoryName;
 	private List<String> subcategories;
