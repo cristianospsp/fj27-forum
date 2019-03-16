@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
@@ -27,6 +28,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Order(2)
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -45,21 +47,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-				.antMatchers(HttpMethod.GET,"/api/topics/**").permitAll()
-				.antMatchers("/api/auth/**").permitAll()
-				.antMatchers("/admin/reports/**").permitAll()
-				.anyRequest().authenticated()
-				.and()
-				.cors()
-				.and()
-				.csrf().disable()
-				.sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-				.and()
-				.addFilterBefore(new JwtAuthenticationFilter(tokenManager, userService), UsernamePasswordAuthenticationFilter.class)
-				.exceptionHandling()
-				.authenticationEntryPoint(new JwtAuthenticationEntryPoint());
+		http.antMatcher("/api/**") // adicionado o antMatcher base
+				.authorizeRequests()
+					.antMatchers(HttpMethod.GET,"/api/topics/**").permitAll()
+					.antMatchers("/api/auth/**").permitAll()
+					.anyRequest().authenticated()
+					.and()
+					.cors()
+					.and()
+					.csrf().disable()
+					.sessionManagement()
+					.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+					.and()
+					.addFilterBefore(new JwtAuthenticationFilter(tokenManager, userService), UsernamePasswordAuthenticationFilter.class)
+					.exceptionHandling()
+					.authenticationEntryPoint(new JwtAuthenticationEntryPoint());
 	}
 
 	@Override
