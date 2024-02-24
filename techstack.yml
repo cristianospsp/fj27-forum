@@ -1,0 +1,321 @@
+repo_name: cristianospsp/fj27-forum
+report_id: d4af8aa4c2b4444369f2ae6227c8fdc4
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-24T20:54:50+00:00'
+requested_by: cristianospsp
+provider: github
+branch: master
+detected_tools_count: 25
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  version: '1.8'
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: Repo Metadata
+  last_updated_by: cristiano
+  last_updated_on: 2019-02-16 13:28:50.000000000 Z
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/src/main/resources/static/js/jquery.min.js
+  detection_source: src/main/resources/static/js/jquery.min.js
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 13:22:25.000000000 Z
+- name: Spring Framework
+  description: An application framework and inversion of control container for the
+    Java platform
+  website_url: https://spring.io/projects/spring-framework
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/2006/spring-framework-project-logo.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: H2 Database
+  description: A relational database management system written in Java
+  website_url: http://www.h2database.com/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/3105/h2-logo_square_400x400.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 15:42:39.000000000 Z
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-02-16 13:28:50.000000000 Z
+- name: Redis
+  description: Open source (BSD licensed), in-memory data structure store
+  website_url: http://redis.io/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: In-Memory Databases
+  image_url: https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-02-16 13:28:50.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum
+  detection_source: Repo Metadata
+- name: Apache Camel
+  description: A versatile open source integration framework
+  website_url: https://camel.apache.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/src/main/resources/application.properties
+  detection_source: src/main/resources/application.properties
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 19:11:50.000000000 Z
+- name: com.h2database:h2
+  description: H2 Database Engine
+  license: MIT-feh
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 15:42:39.000000000 Z
+- name: com.icegreen:greenmail
+  description: GreenMail - Email Test Servers
+  version: 1.5.8
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 15:42:39.000000000 Z
+- name: io.jsonwebtoken:jjwt
+  description: 'Java JWT: JSON Web Token for Java and Android'
+  version: 0.9.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-02-23 14:41:10.000000000 Z
+- name: io.springfox:springfox-swagger-ui
+  description: JSON API documentation for spring based applications
+  version: 2.9.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: io.springfox:springfox-swagger2
+  description: JSON API documentation for spring based applications
+  version: 2.9.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: mysql:mysql-connector-java
+  description: MySQL JDBC Type 4 driver
+  license: GPL-3.0-only
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-02-16 13:28:50.000000000 Z
+- name: org.springframework.boot:spring-boot-devtools
+  description: Spring Boot Developer Tools
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-actuator
+  description: Starter for using Spring Boot's Actuator which provides production
+    ready features to help you monitor and manage your application
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-data-jpa
+  description: Starter for using Spring Data JPA with Hibernate
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-data-redis
+  description: Starter for using Redis key-value data store with Spring Data Redis
+    and the Lettuce client
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-mail
+  description: Starter for using Java Mail and Spring Framework's email sending support
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-security
+  description: Starter for using Spring Security
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-test
+  description: Starter for testing Spring Boot applications with libraries including
+    JUnit
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-thymeleaf
+  description: Starter for building MVC web applications using Thymeleaf views
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-validation
+  description: Starter for using Java Bean Validation with Hibernate Validator
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
+- name: org.springframework.boot:spring-boot-starter-web
+  description: Starter for building web, including RESTful, applications using Spring
+    MVC
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/cristianospsp/fj27-forum/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: cristiano
+  last_updated_on: 2019-03-16 18:29:36.000000000 Z
